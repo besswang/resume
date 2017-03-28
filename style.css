@@ -13,7 +13,7 @@ a{
 
 /* page styles */
 
-section.summary{
+section.summary,section.skill,section.proSum{
     height: 100vh; /* 100vh = viewport height*/
     display: flex;
     justify-content: center;
@@ -29,10 +29,11 @@ section.summary .text{
     line-height: 1.5;
     text-align: center;
 }
-
+section.skill,section.proSum{
+    background: rgb(244,244,244);
+}
 section.works{
     height: 100vh;
-    background: rgb(244,244,244);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,13 +47,16 @@ section.works .imageWrapper{
     background: white;
     text-align: right;
 }
-section.works > ul{
+section.works > ul,section.proSum > ul{
     display: flex;
     flex-wrap: wrap;
     max-width: 700px;
     justify-content: space-between;
 }
-
+section.skill > ul>li,section.proSum > ul>li{
+    box-sizing: border-box;
+    line-height:2em;
+}
 section.works > ul h3{
     font-weight: normal;
     font-size: 16px;
@@ -60,7 +64,7 @@ section.works > ul h3{
     margin: 8px 0;
 }
 
-section.works > h2, section.contacts > h2{
+section.works > h2, section.contacts > h2,section.skill > h2,section.proSum > h2{
     font-size: 32px;
     margin-bottom: 1em;
 }
